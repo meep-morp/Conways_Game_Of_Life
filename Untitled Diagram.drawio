@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-08-22T05:04:57.539Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" etag="3ZwzbZw3vXcHYeDZqauV" version="13.6.4" type="github">
+<mxfile host="app.diagrams.net" modified="2020-08-23T02:07:03.171Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" etag="jrFUWcVt6c15XEtTVcdu" version="13.6.4" type="github" pages="2">
   <diagram name="Page-1" id="c9db0220-8083-56f3-ca83-edcdcd058819">
     <mxGraphModel dx="1298" dy="2559.5" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="826" pageHeight="1169" background="#ffffff" math="0" shadow="0" extFonts="Russo One^https://fonts.googleapis.com/css?family=Russo+One|Titillium Web^https://fonts.googleapis.com/css?family=Titillium+Web">
       <root>
@@ -28,26 +28,49 @@
         <mxCell id="Tp6fJch2ndLfM1ZxOPyc-24" value="&lt;h1 style=&quot;font-size: 20px&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-weight: normal&quot;&gt;Create a few sample cell configurations that users can load and run&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-weight: normal&quot;&gt;Add an option that creates a random cell configuration that users can run&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-weight: normal&quot;&gt;Add additional cell properties, like color or size, and incorporate them into your visualization&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-weight: normal&quot;&gt;Allow users to specify the speed of the simulation&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-weight: normal&quot;&gt;Provide functionality to manually step through the simulation one generation at a time, as opposed to animating automatically&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-weight: normal&quot;&gt;Allow users to change the dimension of the grid being displayed&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-weight: normal&quot;&gt;Given a specific generation, calculate the configuration of cells at that point in time, and jump to that state, bypassing animation (i.e. skip ahead&amp;nbsp;&lt;em style=&quot;box-sizing: border-box&quot;&gt;n&lt;/em&gt;&amp;nbsp;generations).&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontFamily=Georgia;fontSize=25;fontColor=#FCFCFC;" parent="1" vertex="1">
           <mxGeometry x="160" y="-150" width="740" height="303" as="geometry" />
         </mxCell>
-        <mxCell id="W2oQ9se14a24o56sv9Hn-1" value="Option 1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;strokeColor=none;strokeWidth=1;fillColor=#6C767D;fontColor=#FFFFFF;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=10;labelBackgroundColor=none;fontFamily=Titillium Web;FType=g;" vertex="1" parent="1">
+        <mxCell id="W2oQ9se14a24o56sv9Hn-1" value="Option 1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;strokeColor=none;strokeWidth=1;fillColor=#6C767D;fontColor=#FFFFFF;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=10;labelBackgroundColor=none;fontFamily=Titillium Web;FType=g;" parent="1" vertex="1">
           <mxGeometry x="940" y="330" width="90" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="W2oQ9se14a24o56sv9Hn-2" value="Option 2" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;strokeColor=none;strokeWidth=1;fillColor=#6C767D;fontColor=#FFFFFF;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=10;labelBackgroundColor=none;fontFamily=Titillium Web;" vertex="1" parent="1">
+        <mxCell id="W2oQ9se14a24o56sv9Hn-2" value="Option 2" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;strokeColor=none;strokeWidth=1;fillColor=#6C767D;fontColor=#FFFFFF;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=10;labelBackgroundColor=none;fontFamily=Titillium Web;" parent="1" vertex="1">
           <mxGeometry x="1060" y="330" width="90" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="W2oQ9se14a24o56sv9Hn-3" value="Option 4" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;strokeColor=none;strokeWidth=1;fillColor=#6C767D;fontColor=#FFFFFF;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=10;labelBackgroundColor=none;fontFamily=Titillium Web;" vertex="1" parent="1">
+        <mxCell id="W2oQ9se14a24o56sv9Hn-3" value="Option 4" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;strokeColor=none;strokeWidth=1;fillColor=#6C767D;fontColor=#FFFFFF;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=10;labelBackgroundColor=none;fontFamily=Titillium Web;" parent="1" vertex="1">
           <mxGeometry x="1060" y="380" width="90" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="W2oQ9se14a24o56sv9Hn-4" value="Option 3" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;strokeColor=none;strokeWidth=1;fillColor=#6C767D;fontColor=#FFFFFF;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=10;labelBackgroundColor=none;fontFamily=Titillium Web;" vertex="1" parent="1">
+        <mxCell id="W2oQ9se14a24o56sv9Hn-4" value="Option 3" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;strokeColor=none;strokeWidth=1;fillColor=#6C767D;fontColor=#FFFFFF;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=10;labelBackgroundColor=none;fontFamily=Titillium Web;" parent="1" vertex="1">
           <mxGeometry x="940" y="380" width="90" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="W2oQ9se14a24o56sv9Hn-5" value="Option 5" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;strokeColor=none;strokeWidth=1;fillColor=#6C767D;fontColor=#FFFFFF;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=10;labelBackgroundColor=none;fontFamily=Titillium Web;" vertex="1" parent="1">
+        <mxCell id="W2oQ9se14a24o56sv9Hn-5" value="Option 5" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;strokeColor=none;strokeWidth=1;fillColor=#6C767D;fontColor=#FFFFFF;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=10;labelBackgroundColor=none;fontFamily=Titillium Web;" parent="1" vertex="1">
           <mxGeometry x="940" y="430" width="90" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="W2oQ9se14a24o56sv9Hn-6" value="Option 6" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;strokeColor=none;strokeWidth=1;fillColor=#6C767D;fontColor=#FFFFFF;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=10;labelBackgroundColor=none;fontFamily=Titillium Web;" vertex="1" parent="1">
+        <mxCell id="W2oQ9se14a24o56sv9Hn-6" value="Option 6" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;strokeColor=none;strokeWidth=1;fillColor=#6C767D;fontColor=#FFFFFF;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=10;labelBackgroundColor=none;fontFamily=Titillium Web;" parent="1" vertex="1">
           <mxGeometry x="1060" y="430" width="90" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="W2oQ9se14a24o56sv9Hn-7" value="RANDOMIZE" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fontColor=#FFFFFF;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=0;fontSize=16;spacing=5;labelBackgroundColor=none;fontFamily=Russo One;fillColor=#3E4DB5;" vertex="1" parent="1">
+        <mxCell id="W2oQ9se14a24o56sv9Hn-7" value="RANDOMIZE" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fontColor=#FFFFFF;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=0;fontSize=16;spacing=5;labelBackgroundColor=none;fontFamily=Russo One;fillColor=#3E4DB5;" parent="1" vertex="1">
           <mxGeometry x="475" y="750" width="130" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p0AeDIecyzFAsmkMopxO" name="Page-2">
+    <mxGraphModel dx="1298" dy="806" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Russo One^https://fonts.googleapis.com/css?family=Russo+One|Titillium Web^https://fonts.googleapis.com/css?family=Titillium+Web">
+      <root>
+        <mxCell id="9-BwRMEGkrb8sK8QqRAO-0" />
+        <mxCell id="9-BwRMEGkrb8sK8QqRAO-1" parent="9-BwRMEGkrb8sK8QqRAO-0" />
+        <mxCell id="9-BwRMEGkrb8sK8QqRAO-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#580FBA;gradientColor=#270752;" vertex="1" parent="9-BwRMEGkrb8sK8QqRAO-1">
+          <mxGeometry x="70" y="230" width="740" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="9-BwRMEGkrb8sK8QqRAO-4" value="&lt;font face=&quot;Russo One&quot; size=&quot;1&quot; color=&quot;#ffffff&quot;&gt;&lt;b style=&quot;font-size: 50px&quot;&gt;THE GAME OF LIFE&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="9-BwRMEGkrb8sK8QqRAO-1">
+          <mxGeometry x="179.38" y="280" width="521.25" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="9-BwRMEGkrb8sK8QqRAO-6" value="&lt;font color=&quot;#ffffff&quot; style=&quot;font-size: 20px&quot; face=&quot;Titillium Web&quot;&gt;By&amp;nbsp; John Conway&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="9-BwRMEGkrb8sK8QqRAO-1">
+          <mxGeometry x="520.63" y="350" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9-BwRMEGkrb8sK8QqRAO-8" value="&lt;p&gt;&lt;font style=&quot;font-size: 12px&quot; color=&quot;#ffffff&quot; face=&quot;Russo One&quot;&gt;&lt;b&gt;SIMULATE&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#3E4DB5;" vertex="1" parent="9-BwRMEGkrb8sK8QqRAO-1">
+          <mxGeometry x="380.01" y="400" width="119.99" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9-BwRMEGkrb8sK8QqRAO-9" value="&lt;font color=&quot;#ffffff&quot;&gt;git&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;gradientColor=none;fillColor=none;" vertex="1" parent="9-BwRMEGkrb8sK8QqRAO-1">
+          <mxGeometry x="760" y="500" width="40" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
