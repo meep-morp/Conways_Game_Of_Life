@@ -33,11 +33,19 @@ const neighbors = [
 ]
 
 const Grid = props => {
+    // STATES
     const [grid, setGrid] = useState(() => {
         return TwoDArray();
     });
     const [isRunning, setIsRunning] = useState(false)
+    let [gen, setGen] = useState(0)
 
+    // Keep up with current state of running
+    const runningRef = useRef(isRunning);
+    runningRef.current = isRunning
+
+
+    // FUNCTIONS
     const randomize = () => {
         setGrid(() => {
             const rows = [];
@@ -50,6 +58,7 @@ const Grid = props => {
     }
 
     const clear = () => {
+        setGen(0)
         setGrid(() => {
             const rows = [];
             for (let i = 0; i < numRows; i++) {
@@ -60,17 +69,13 @@ const Grid = props => {
         })
     }
 
-    // Keep up with current state of running
-    const runningRef = useRef(isRunning);
-    runningRef.current = isRunning
-
     // useCallback prevents the function from being recreated every render
     const run = useCallback(() => {
-
         if (!runningRef.current) {
             return;
         }
-
+        // Add to generation count
+        setGen(gen += 1)
         // Updating grid state
         setGrid((newGrid) => {
             return produce(newGrid, gridCopy => {
@@ -90,7 +95,7 @@ const Grid = props => {
                         // Implement rules
                         if (numNeighbors < 2 || numNeighbors > 3) {
                             gridCopy[i][j] = 0;
-                        } else if (newGrid[i][j] === 0 && neighbors === 3) {
+                        } else if (newGrid[i][j] === 0 && numNeighbors === 3) {
                             gridCopy[i][j] = 1;
                         }
 
@@ -107,6 +112,7 @@ const Grid = props => {
 
     return (
         <>
+            <h3>Generation: {gen}</h3>
             <div className="grid" style={{
                 display: "grid",
                 gridTemplateColumns: `repeat(${numCols}, 20px)`
@@ -114,6 +120,7 @@ const Grid = props => {
                 {/* Mapping throught the grid to display it in the browser window. Index is used to control the state of the cell */}
                 {grid.map((rows, i) => rows.map((cols, j) => (
                     <div
+                        className="cell"
                         onClick={() => {
                             const newGrid = produce(grid, gridCopy => {
                                 gridCopy[i][j] = !grid[i][j]
@@ -122,7 +129,7 @@ const Grid = props => {
                         }}
                         style={{
                             width: 20, height: 20,
-                            background: grid[i][j] ? '#1edada' : undefined,
+                            background: grid[i][j] ? 'radial-gradient(circle, rgba(77,207,224,1) 0%, rgba(17,133,224,1) 100%)' : undefined,
                             border: 'solid 1.3px black'
                         }}
                     />
