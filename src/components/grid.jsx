@@ -78,7 +78,7 @@ const Grid = props => {
             return;
         }
         // Add to generation count
-        setGen(gen += 1)
+        setGen(genRef.current += 1)
         // Updating grid state
         setGrid((newGrid) => {
             return produce(newGrid, gridCopy => {
