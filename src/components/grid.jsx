@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback, useRef, useContext } from 'react';
 import playImg from "../assets/PLayIcon.svg";
 import pauseImg from "../assets/pauseIcon.svg";
 import randomImg from "../assets/randomIcon.svg";
@@ -6,9 +6,10 @@ import clearImg from "../assets/clearImg.svg";
 // This allows use to mutate our array without making extra copies to take up memory, or pain stakingly spread the values in ->
 import produce from 'immer';
 import { useState } from 'react';
+import { AppContext } from '../context/AppContext';
 
-const numCols = 25;
-const numRows = 25;
+const numCols = 50; // width
+const numRows = 25; // height
 
 // Generates a 2d Array from the specified num of cols and rows, and fills it with the bool false, meaning the cells start out dead. Returns the grid.
 const TwoDArray = () => {
@@ -34,19 +35,25 @@ const neighbors = [
 
 const Grid = props => {
     // STATES
+    const [speed, setSpeed, isRunning, setIsRunning] = useContext(AppContext)
+
     const [grid, setGrid] = useState(() => {
         return TwoDArray();
     });
-    const [isRunning, setIsRunning] = useState(false)
     let [gen, setGen] = useState(0)
 
     // Keep up with current state of running
     const runningRef = useRef(isRunning);
     runningRef.current = isRunning
-
+    const genRef = useRef(gen)
+    genRef.current = gen
+    const speedRef = useRef(speed)
+    speedRef.current = speed
 
     // FUNCTIONS
     const randomize = () => {
+        setIsRunning(false)
+        setGen(0)
         setGrid(() => {
             const rows = [];
             for (let i = 0; i < numRows; i++) {
@@ -58,6 +65,7 @@ const Grid = props => {
     }
 
     const clear = () => {
+        setIsRunning(false)
         setGen(0)
         setGrid(() => {
             const rows = [];
@@ -106,13 +114,13 @@ const Grid = props => {
 
 
         // timeout acts as the FPS of simulation, recursively
-        setTimeout(run, 100)
+        setTimeout(run, speedRef)
 
     }, []);
 
     return (
-        <>
-            <h3>Generation: {gen}</h3>
+        <div className="grid-container">
+            <h3>Generation: {genRef.current}</h3>
             <div className="grid" style={{
                 display: "grid",
                 gridTemplateColumns: `repeat(${numCols}, 20px)`
@@ -130,7 +138,7 @@ const Grid = props => {
                         style={{
                             width: 20, height: 20,
                             background: grid[i][j] ? 'radial-gradient(circle, rgba(77,207,224,1) 0%, rgba(17,133,224,1) 100%)' : undefined,
-                            border: 'solid 1.3px black'
+                            border: 'solid 1.3px white'
                         }}
                     />
                 )))}
@@ -164,7 +172,7 @@ const Grid = props => {
                     <img src={clearImg} alt="clear" />
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
