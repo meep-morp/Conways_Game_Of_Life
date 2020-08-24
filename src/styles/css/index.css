@@ -1,0 +1,17 @@
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 30%;
+}
+.buttons img {
+  height: 50px;
+  width: 50px;
+}
+.buttons img:hover {
+  width: 70px;
+  height: 60px;
+  transition: 0.4s ease;
+}
+.buttons .button {
+  cursor: pointer;
+}

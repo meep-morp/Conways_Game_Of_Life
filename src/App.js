@@ -1,13 +1,13 @@
-import React from "react";
-import bgVideo from "./assets/Network.webm"
+import React, { useState } from "react";
 import "./styles/css/index.css";
-
+import Grid from "./components/grid";
 function App() {
-  return (
-    <div className="App">
-      <video src={bgVideo}></video>
-    </div>
-  );
+
+	return (
+		<div className="App">
+			<Grid />
+		</div>
+	);
 }
 
 export default App;
