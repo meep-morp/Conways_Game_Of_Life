@@ -1,0 +1,73 @@
+.buttons {
+	display: flex;
+	justify-content: space-evenly;
+	width: 30%;
+	margin-top: 10px;
+	img {
+		height: 50px;
+		width: 50px;
+		&:hover {
+			width: 70px;
+			height: 60px;
+			transition: 0.4s ease;
+		}
+	}
+	.button {
+		cursor: pointer;
+	}
+}
+
+.radios {
+	display: flex;
+	input {
+		border-radius: 30px;
+		height: 25px;
+		width: 50px;
+		background-color: #dfdfdf;
+		text-shadow: none;
+		color: #9b9b9b;
+		-webkit-appearance: none;
+		cursor: pointer;
+		transition: 0.8s ease;
+		padding: 5px;
+		outline: none;
+
+		&:checked {
+			background: rgb(145, 31, 182);
+			background: linear-gradient(
+				180deg,
+				rgb(195, 81, 233) 0%,
+				rgb(144, 116, 243) 62%,
+				rgb(75, 140, 238) 100%
+			);
+			text-shadow: 0 0 1px black, 0 0 1px black;
+			color: black;
+		}
+	}
+
+	.size-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.fifty25 {
+		&::before {
+			content: "50 X 25";
+			font-size: 1.2rem;
+			text-align: center;
+		}
+	}
+
+	.thirty25::before {
+		content: "30 X 25";
+		font-size: 1.2rem;
+		text-align: center;
+	}
+
+	.twenty25::before {
+		content: "20 X 25";
+		font-size: 1.2rem;
+		text-align: center;
+	}
+}
