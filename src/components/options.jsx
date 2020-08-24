@@ -1,15 +1,13 @@
 import React, { useState, useContext } from 'react';
 import { AppContext } from '../context/AppContext';
+import { produce } from "immer";
 
 const Options = props => {
     const [options, setOptions] = useState(true)
     const [speed, setSpeed, isRunning, setIsRunning] = useContext(AppContext)
-    console.log(speed)
 
     const onChangeHandler = (e) => {
-        setIsRunning(false)
         setSpeed(e.target.value)
-        setIsRunning(true)
     }
     return (
         <div className="options-container">
@@ -33,8 +31,8 @@ const Options = props => {
                         ? <div className="options-bar">
                             <p>Speed</p>
                             <label htmlFor="speed" className="SR_Only" >Desired Speed in Milliseconds</label>
-                            <input type="range" min={100} max={4000} name="speed" onChange={onChangeHandler} />
-                            {speed}
+                            <input type="range" min={200} max={4000} name="speed" onChange={onChangeHandler} />
+                            {speed}ms
                         </div>
                         : <div className="rules">
                             <h3>The Rules of Game of Life</h3>
@@ -45,7 +43,7 @@ const Options = props => {
                                 <li>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>
                             </ul>
                             <h3>External Links</h3>
-                            <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Wiki</a>
+                            <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Wiki</a>
                         </div>
                 }
             </div>

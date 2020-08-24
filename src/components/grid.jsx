@@ -35,20 +35,15 @@ const neighbors = [
 
 const Grid = props => {
     // STATES
-    const [speed, setSpeed, isRunning, setIsRunning] = useContext(AppContext)
+    let [speed, setSpeed, isRunning, setIsRunning, genRef, gen, setGen, speedRef] = useContext(AppContext)
 
     const [grid, setGrid] = useState(() => {
         return TwoDArray();
     });
-    let [gen, setGen] = useState(0)
 
     // Keep up with current state of running
     const runningRef = useRef(isRunning);
     runningRef.current = isRunning
-    const genRef = useRef(gen)
-    genRef.current = gen
-    const speedRef = useRef(speed)
-    speedRef.current = speed
 
     // FUNCTIONS
     const randomize = () => {
@@ -99,7 +94,6 @@ const Grid = props => {
                                 numNeighbors += newGrid[newI][newJ];
                             }
                         })
-                        console.log(numNeighbors)
                         // Implement rules
                         if (numNeighbors < 2 || numNeighbors > 3) {
                             gridCopy[i][j] = 0;
@@ -114,7 +108,7 @@ const Grid = props => {
 
 
         // timeout acts as the FPS of simulation, recursively
-        setTimeout(run, speedRef)
+        setTimeout(run, parseInt(speedRef.current))
 
     }, []);
 

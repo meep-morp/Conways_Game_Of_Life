@@ -1,0 +1,51 @@
+.home {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	width: 65%;
+	margin: 0 auto;
+	margin-top: 20vh;
+	height: 100%;
+
+	h1 {
+		font-size: 6rem;
+		margin-bottom: 0;
+	}
+	h3 {
+		margin: 0;
+		text-align: right;
+	}
+
+	.button-link {
+		text-decoration: none;
+		font-family: "Russo One", sans-serif;
+		font-size: 1.5rem;
+		border: none;
+		color: white;
+		width: 20%;
+		background: #3e4db5;
+		padding: 15px;
+
+		&:hover {
+			background: #232c66;
+			transition: 0.3s ease;
+		}
+	}
+
+	.gitLink {
+		bottom: 0;
+		right: 10px;
+		position: absolute;
+		img {
+			height: 50px;
+			width: 50px;
+
+			&:hover {
+				height: 60px;
+				width: 60px;
+				transition: 0.3s ease;
+			}
+		}
+	}
+}
