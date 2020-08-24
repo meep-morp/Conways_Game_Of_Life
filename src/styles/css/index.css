@@ -27,6 +27,7 @@ button {
 }
 body {
   height: 100vh;
+  overflow: hidden;
   color: white;
   background: #000000;
   background: linear-gradient(180deg, #000000 0%, #380362 62%, #8311e0 100%);
@@ -145,6 +146,9 @@ body {
   font-weight: bold;
   letter-spacing: 1px;
 }
+.options-container .rules ul {
+  text-align: left;
+}
 .options-container .rules a {
   color: #4dcfe0;
   text-decoration: none;
@@ -166,4 +170,46 @@ body {
 }
 .buttons .button {
   cursor: pointer;
+}
+.radios {
+  display: flex;
+}
+.radios input {
+  border-radius: 30px;
+  height: 25px;
+  width: 50px;
+  background-color: #dfdfdf;
+  text-shadow: none;
+  color: #9b9b9b;
+  -webkit-appearance: none;
+  cursor: pointer;
+  transition: 0.8s ease;
+  padding: 5px;
+  outline: none;
+}
+.radios input:checked {
+  background: #911fb6;
+  background: linear-gradient(180deg, #c351e9 0%, #9074f3 62%, #4b8cee 100%);
+  text-shadow: 0 0 1px black, 0 0 1px black;
+  color: black;
+}
+.radios .size-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.radios .fifty25::before {
+  content: "50 X 25";
+  font-size: 1.2rem;
+  text-align: center;
+}
+.radios .thirty25::before {
+  content: "30 X 25";
+  font-size: 1.2rem;
+  text-align: center;
+}
+.radios .twenty25::before {
+  content: "20 X 25";
+  font-size: 1.2rem;
+  text-align: center;
 }

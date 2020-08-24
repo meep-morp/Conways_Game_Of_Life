@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useContext } from 'react';
+import React, { useCallback, useRef, useContext, useEffect } from 'react';
 import playImg from "../assets/PLayIcon.svg";
 import pauseImg from "../assets/pauseIcon.svg";
 import randomImg from "../assets/randomIcon.svg";
@@ -7,19 +7,6 @@ import clearImg from "../assets/clearImg.svg";
 import produce from 'immer';
 import { useState } from 'react';
 import { AppContext } from '../context/AppContext';
-
-const numCols = 50; // width
-const numRows = 25; // height
-
-// Generates a 2d Array from the specified num of cols and rows, and fills it with the bool false, meaning the cells start out dead. Returns the grid.
-const TwoDArray = () => {
-    const rows = [];
-    for (let i = 0; i < numRows; i++) {
-        rows.push(Array.from(Array(numCols), () => 0));
-    }
-
-    return rows;
-};
 
 // This contains the the coordinates for the surrounding cells in a grid
 const neighbors = [
@@ -34,8 +21,25 @@ const neighbors = [
 ]
 
 const Grid = props => {
+    // Generates a 2d Array from the specified num of cols and rows, and fills it with the bool false, 
+    // meaning the cells start out dead. Returns the grid.
+    const TwoDArray = () => {
+        const rows = [];
+        for (let i = 0; i < numRows; i++) {
+            rows.push(Array.from(Array(numCols), () => 0));
+        }
+
+        return rows;
+    };
+
     // STATES
-    let [speed, setSpeed, isRunning, setIsRunning, genRef, gen, setGen, speedRef] = useContext(AppContext)
+    let [speed, setSpeed, isRunning, setIsRunning, numRows, setNumRows, numCols, setNumCols] = useContext(AppContext)
+    let [gen, setGen] = useState(0)
+
+    const genRef = useRef(gen)
+    genRef.current = gen
+    const speedRef = useRef(speed)
+    speedRef.current = speed
 
     const [grid, setGrid] = useState(() => {
         return TwoDArray();
@@ -46,6 +50,7 @@ const Grid = props => {
     runningRef.current = isRunning
 
     // FUNCTIONS
+
     const randomize = () => {
         setIsRunning(false)
         setGen(0)
@@ -73,6 +78,7 @@ const Grid = props => {
     }
 
     // useCallback prevents the function from being recreated every render
+
     const run = useCallback(() => {
         if (!runningRef.current) {
             return;
@@ -110,7 +116,8 @@ const Grid = props => {
         // timeout acts as the FPS of simulation, recursively
         setTimeout(run, parseInt(speedRef.current))
 
-    }, []);
+    }, [numCols, numRows]);
+
 
     return (
         <div className="grid-container">
@@ -119,7 +126,8 @@ const Grid = props => {
                 display: "grid",
                 gridTemplateColumns: `repeat(${numCols}, 20px)`
             }}>
-                {/* Mapping throught the grid to display it in the browser window. Index is used to control the state of the cell */}
+                {/* Mapping throught the grid to display it in the browser window. 
+                Index is used to control the state of the cell */}
                 {grid.map((rows, i) => rows.map((cols, j) => (
                     <div
                         className="cell"
