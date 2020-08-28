@@ -5,12 +5,14 @@ import Grid from "./components/grid";
 import Options from "./components/options";
 import { AppProvider } from "./context/AppContext";
 import Home from "./components/home";
+import Canvas from "./components/canvas";
 function App() {
 	return (
 		<AppProvider>
 			<Router>
 				<div className="App">
 					<Route path="/" exact>
+						<Canvas />
 						<Home />
 					</Route>
 					<Route path="/cells">

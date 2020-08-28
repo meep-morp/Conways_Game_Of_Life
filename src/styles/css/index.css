@@ -38,6 +38,21 @@ body {
 .SR_Only {
   display: none;
 }
+.canvas-container {
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+  left: 0;
+}
+.canvas-container #canvas {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  opacity: 0.5;
+  background: white;
+}
 .home {
   display: flex;
   flex-direction: column;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import git from "../assets/gitLogo.svg";
 import { Link } from 'react-router-dom';
 
