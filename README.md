@@ -1,4 +1,5 @@
 # Conway's Game of Life
+<img src="./gol_ss_1.png" />
 
 <a href='https://conways-game-of-life-meep-morp.vercel.app/'>DEPLOYED WEBPAGE</a>
 
